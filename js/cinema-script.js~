@@ -1,0 +1,45 @@
+var vids_list_arr=new Array();
+//var vid_main=document.getElementById("vid_main");
+
+var i=0;
+
+function showVid(){
+	//alert(i+vids_list_arr[i]);
+		 
+vid_main.src="vids/top10/"+vids_list_arr[i];
+
+document.getElementById("name1").innerHTML=vids_list_arr[i];
+}
+
+
+function nextVid(){
+if(i<vids_list_arr.length-1) {i++;}else{i=0;}
+showVid();
+
+}
+
+function prevVid(){
+if(i>0) {i--;}else{i=vids_list_arr.length-1;}
+showVid();
+}
+         
+
+//console.log("readystate-"+document.getElementById("vid_main").readyState);
+//console.log("duration-"+document.getElementById("vid_main").duration);
+function myOnCanPlayFunction() {console.log('Can play'); alert("can play");}
+/**
+function myOnCanPlayThroughFunction() { console.log('Can play through'); }
+function myOnLoadedData() { console.log('Loaded data'+ document.getElementById("aud2").readyState); }
+function myOnPlaying() { console.log('Playing data'); }
+function myOnPlay() { console.log('onplay'+ document.getElementById("aud2").readyState); }
+function myOnPause() { console.log('on pause'); }
+function myOnSeeking() { console.log('on seeking'); }
+function myOnSeeked() { console.log('on seaked'); }
+function myOnEnded() { console.log('on Ended'); }
+function myOnError() { console.log('on Error'); }
+function myOnStalled() { console.log('on Stalled'); }
+function myOnLoadeMetaData() { console.log('on Loaded Metadata'); }
+function myOnProgress() { console.log('on Progress'+ document.getElementById("aud2").readyState); }
+function nextVid(){document.getElementById("vid1").src="resources/delhi 006.mp4";}
+**/
+
